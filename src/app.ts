@@ -4,7 +4,7 @@ import connect from "./utils/connect";
 import routes from "./routes";
 import log from "./utils/logger";
 
-const port = config.get<number | null>("port");
+const port = process.env.PORT || config.get<number | null>("port");
 
 const app = express();
 
